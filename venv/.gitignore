@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+*.venv
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# PostgreSQL
+*.pgsql
+*.pgdump
+*.psql
+
+# Media / Static files
+media/
+staticfiles/
+
+# IDEs/Editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pipenv / Poetry
+Pipfile
+dev.env
+Pipfile.lock
+
+# Migrations (optional, se preferir versionar, remova essa linha)
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+
+# Docker
+*.dockerfile
+*.dockerignore
+docker-compose.override.yml
