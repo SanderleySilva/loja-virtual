@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'loja_admin_app',
+    'usuarios_app',
 ]
 
 MIDDLEWARE = [
@@ -37,6 +38,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+
+AUTHENTICATION_BACKENDS = [
+    'usuarios_app.backends.EmailBackend',  # Substitua 'seu_aplicativo' pelo nome do seu aplicativo
+    'django.contrib.auth.backends.ModelBackend',  # Mantenha o backend padrão para outras autenticações
+]
+
+
+
 
 ROOT_URLCONF = 'lojaproject.urls'
 

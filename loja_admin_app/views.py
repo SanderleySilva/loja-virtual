@@ -47,12 +47,3 @@ class PagamentoView(TemplateView):
 
 class SucessoPagamentoView(TemplateView):
     template_name = 'pagamentos/sucesso_pagamento.html'
-
-
-class CadastroUserView(TemplateView):
-    template_name = 'cadastro_de_usuários/cadastroUser.html'
-
-
-
-class LoginUserView(TemplateView):
-    template_name = 'cadastro_de_usuários/loginUser.html'
