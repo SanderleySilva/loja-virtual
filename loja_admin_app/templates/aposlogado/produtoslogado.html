@@ -22,7 +22,7 @@
                   <p class="card-text text-danger fw-bold fs-5">R$ {{ produto.preco }}</p>
       
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'login'%}" class="btn btn-sm btn-primary"><i class="fas fa-cart-plus"></i> Comprar</a>
+                    <a href="{% url 'loja_admin_app:pagamento' produto.id %}" class="btn btn-sm btn-primary"><i class="fas fa-cart-plus"></i> Comprar</a>
                   </div>
                 </div>
               </div>

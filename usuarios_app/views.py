@@ -30,21 +30,32 @@ def cadastro(request):
         user = User.objects.create_user(username=username,first_name=nome, last_name=sobrenome, email=email, password=senha)
         user.save()
         return HttpResponse(f'O usuário {nome} com o email {email} foi cadastrado com sucesso!')
+    
 
+
+@csrf_exempt
 def login(request):
+    error_message = None
+    
     if request.method == "GET":
         return render(request, 'login.html')
     else:
-        email=request.POST.get('email')
-        senha=request.POST.get('senha')
-        user=authenticate(username=email, password=senha)
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
+        user = authenticate(username=email, password=senha)
 
         if user:
             login_django(request, user)
-            return redirect('plataforma')
+            return redirect('loja_admin_app:home_logado')
         else:
-            return HttpResponse('Email ou senha inválidos!')
+            error_message = 'Email ou senha inválidos!'
+            return render(request, 'login.html', {'error_message': error_message})
+
         
+
+
+
+
 
 def plataforma(request):
     if request.user.is_authenticated:
