@@ -75,14 +75,11 @@ WSGI_APPLICATION = 'lojaproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lojavirtual',
-        'USER': 'postgres',
-        'PASSWORD': 'sander1998',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'lojavirtual.sqlite3',
     }
 }
+
 
 
 # Password validation
